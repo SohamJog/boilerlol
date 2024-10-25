@@ -108,6 +108,7 @@ dependencies = [
 name = "boilerlol"
 version = "0.1.0"
 dependencies = [
+ "percent-encoding 2.3.1",
  "rocket",
 ]
 

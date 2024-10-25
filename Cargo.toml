@@ -5,3 +5,4 @@ edition = "2021"
 
 [dependencies]
 rocket = "0.4.4"
+percent-encoding = "2.1.0"
