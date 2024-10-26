@@ -19,6 +19,9 @@ fn search(cmd: String) -> Redirect {
     let redirect_url = match command {
         "gh" => utils::github::construct_github_url(&cmd),
         "tw" => utils::twitter::construct_twitter_url(&cmd),
+        "drive" => utils::drive::construct_drive_url(&cmd),
+        "maps" => utils::maps::construct_maps_url(&cmd),
+        "docs" => utils::docs::construct_docs_url(&cmd),
         _ => utils::google::construct_google_search_url(&cmd),
     };
 

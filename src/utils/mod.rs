@@ -8,6 +8,11 @@
  pub mod google;
  pub mod github;
  pub mod twitter;
+ pub mod docs;
+ pub mod maps;
+ pub mod drive;
+
+
  
  pub fn get_command_from_query_string(query_string: &str) -> &str {
      if query_string.contains(' ') {
