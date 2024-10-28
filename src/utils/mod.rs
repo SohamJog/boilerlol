@@ -11,6 +11,8 @@
  pub mod docs;
  pub mod maps;
  pub mod drive;
+ pub mod class;
+
 
 
  

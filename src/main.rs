@@ -22,6 +22,7 @@ fn search(cmd: String) -> Redirect {
         "drive" => utils::drive::construct_drive_url(&cmd),
         "maps" => utils::maps::construct_maps_url(&cmd),
         "docs" => utils::docs::construct_docs_url(&cmd),
+        "class" => utils::class::construct_class_url(&cmd),
         _ => utils::google::construct_google_search_url(&cmd),
     };
 
