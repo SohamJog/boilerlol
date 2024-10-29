@@ -11,60 +11,8 @@ fn index() -> &'static str {
     "Hello, world!"
 }
 
-// #[get("/who?<name>")]
-// fn who_search(name: String) -> content::Html<String> {
-//     let html_content = format!(
-//         r#"
-//         <!DOCTYPE html>
-//         <html lang="en">
-//         <head>
-//             <meta charset="UTF-8">
-//             <title>Purdue Directory Search</title>
-//         </head>
-//         <body>
-//             <p>Searching for: {}</p>
-//             <iframe id="directoryFrame" src="https://www.purdue.edu/directory/" style="width:100%; height:100vh;"></iframe>
 
-//             <script>
-//                 // Wait until the iframe has loaded
-//                 document.getElementById('directoryFrame').onload = function() {{
-//                     var iframeDoc = document.getElementById('directoryFrame').contentWindow.document;
-//                     // Fill in the search input (Assuming it has an id or name attribute, update as needed)
-//                     var searchInput = iframeDoc.querySelector('input[name=\"search\"]'); // Update selector based on HTML
-//                     if (searchInput) {{
-//                         searchInput.value = "{}";
-//                         searchInput.form.submit(); // Submit the form if the input exists
-//                     }}
-//                 }};
-//             </script>
-//         </body>
-//         </html>
-//         "#,
-//         name, name
-//     );
-
-//     content::Html(html_content)
-// }
-
-// #[get("/search?<cmd>")]
-// fn search(cmd: String) -> Redirect {
-//     println!("You typed in {}", cmd);
-
-//     let command = utils::get_command_from_query_string(&cmd);
-
-//     let redirect_url = match command {
-//         "gh" => utils::github::construct_github_url(&cmd),
-//         "tw" => utils::twitter::construct_twitter_url(&cmd),
-//         "drive" => utils::drive::construct_drive_url(&cmd),
-//         "maps" => utils::maps::construct_maps_url(&cmd),
-//         "docs" => utils::docs::construct_docs_url(&cmd),
-//         "class" => utils::class::construct_class_url(&cmd),
-//         _ => utils::google::construct_google_search_url(&cmd),
-//     };
-
-//     Redirect::to(redirect_url)
-// }
-
+// TODO: cleanup with helper functions
 #[get("/search?<cmd>")]
 fn search(cmd: String) -> Result<Redirect, content::Html<String>> {
     println!("You typed in {}", cmd);
