@@ -12,6 +12,7 @@
  pub mod maps;
  pub mod drive;
  pub mod class;
+ pub mod html_embdeddings;
 
 
 
