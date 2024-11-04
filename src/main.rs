@@ -22,6 +22,7 @@ fn search(cmd: String) -> Result<Redirect, content::Html<String>> {
     }
 
     // Redirect logic for other commands
+    // TODO: [cleanup] Sort alphabetically
     let redirect_url = match utils::get_command_from_query_string(&cmd) {
         "gh" => utils::github::construct_github_url(&cmd),
         "tw" => utils::twitter::construct_twitter_url(&cmd),
@@ -29,6 +30,29 @@ fn search(cmd: String) -> Result<Redirect, content::Html<String>> {
         "maps" => utils::maps::construct_maps_url(&cmd),
         "docs" => utils::docs::construct_docs_url(&cmd),
         "class" => utils::class::construct_class_url(&cmd),
+        // TODO: [cleanup] Merge the next 4 lines
+        "menus" => utils::menus::construct_menus_url(),
+        "food" => utils::menus::construct_menus_url(),
+        "eats" => utils::menus::construct_menus_url(),
+        "noms" => utils::menus::construct_menus_url(),
+        // Gradescope
+        "gradescope" => utils::gradescope::construct_gradescope_url(),
+        "gr" => utils::gradescope::construct_gradescope_url(),
+        "gscope" => utils::gradescope::construct_gradescope_url(),
+        // Brightspace
+        "bs" => utils::brightspace::construct_brightspace_url(),
+        "brightspace" => utils::brightspace::construct_brightspace_url(),
+        "bspace" => utils::brightspace::construct_brightspace_url(),
+        // Piazza
+        "piazza" => utils::piazza::construct_piazza_url(),
+        "pizza" => utils::piazza::construct_piazza_url(),
+        "pz" => utils::piazza::construct_piazza_url(),
+        // PUSH
+        "push" => utils::push::construct_push_url(),
+        // Edstem
+        "ed" => utils::edstem::construct_edstem_url(),
+        "edstem" => utils::edstem::construct_edstem_url(),
+        // Default
         _ => utils::google::construct_google_search_url(&cmd),
     };
 
