@@ -14,12 +14,12 @@ Below is a list of commands included in this tool. Feel free to contribute to th
 
 | Shortcut     | Args   | Website                                 | Description                          |
 |--------------|--------|-----------------------------------------|--------------------------------------|
-| `gh`         | `user` | GitHub                                  | Searches Github for <user>           |
-| `tw`         | `query`| Twitter                                 | Searches Twitter for <query>         |
-| `drive`      | `cmd`  | Google Drive                            | Searches Google Drive for <cmd>      |
-| `maps`       | `cmd`  | Google Maps                             | Searches Google Maps for <cmd>       |
-| `docs`       | `cmd`  | Google Docs                             | Searches Google Docs for <cmd>       |
-| `class`      | `cmd`  | Boilerclasses                           | Searches boilerclasses for <cmd>     |
+| `gh`         | `user` | GitHub                                  | Searches Github for `user`           |
+| `tw`         | `query`| Twitter                                 | Searches Twitter for `query`         |
+| `drive`      | `cmd`  | Google Drive                            | Searches Google Drive for `cmd`      |
+| `maps`       | `cmd`  | Google Maps                             | Searches Google Maps for `cmd`       |
+| `docs`       | `cmd`  | Google Docs                             | Searches Google Docs for `cmd`       |
+| `class`      | `cmd`  | Boilerclasses                           | Searches boilerclasses for `cmd`     |
 | `menus`      |        | Purdue Food Menus                       | Links to Purdue dining menus         |
 | `food`       |        | Purdue Food Menus                       | Links to Purdue dining menus         |
 | `eats`       |        | Purdue Food Menus                       | Links to Purdue dining menus         |
@@ -36,7 +36,7 @@ Below is a list of commands included in this tool. Feel free to contribute to th
 | `push`       |        | Purdue PUSH                             | Links to PUSH                        |
 | `ed`         |        | Edstem                                  | Links to Edstem                      |
 | `edstem`     |        | Edstem                                  | Links to Edstem                      |
-| `who`        | `cmd`  | Purdue Directory                        | Searches Purdue directory            |
+| `who`        | `cmd`  | Purdue Directory                        | Searches Purdue directory for `cmd`  |
 | _default_    | `cmd`  | Google                                  | Constructs a Google search URL       |
 
 ---
