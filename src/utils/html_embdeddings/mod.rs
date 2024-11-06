@@ -5,6 +5,7 @@
  */
 
  pub mod directory;
+ pub mod gradescope;
 
 
  pub fn get_html_from_query_string(query_string: &str) -> &str {

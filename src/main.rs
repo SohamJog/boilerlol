@@ -20,6 +20,20 @@ fn search(cmd: String) -> Result<Redirect, content::Html<String>> {
         let html_content = utils::html_embdeddings::directory::construct_directory_html(&cmd);
         return Err(content::Html(html_content));
     }
+    if cmd.starts_with("zz ") {
+        // Call the function and handle the Result
+        match utils::html_embdeddings::gradescope::construct_gradescope_html(&cmd[3..]) {
+            Ok(html_content) => {
+                // If the result is Ok, return the HTML content
+                return Err(content::Html(html_content));
+            }
+            Err(e) => {
+                // If an error occurs, log the error or handle it in another way
+                eprintln!("Error constructing gradescope HTML: {}", e);
+                return Err(content::Html(format!("<h1>Error: {}</h1>", e)));
+            }
+        }
+    }
 
     // Redirect logic for other commands
     // TODO: [cleanup] Sort alphabetically
